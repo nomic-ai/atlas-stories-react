@@ -1,0 +1,123 @@
+/* atlas-stories.css */
+
+/* Scrollyteller styles */
+
+.scrollyteller {
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+}
+
+.scrollyteller-box {
+    z-index: 10;
+    width: 100vw;
+    position: sticky;
+    top: 0;
+}
+
+.scrollyteller-iframe {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .scrollyteller-iframe {
+    width: 65vw;
+    margin-left: 35vw;
+  }
+}
+
+.scroller {
+  position: relative;
+  z-index: 20;
+  margin-top: -100vh;
+  transition: background-color 1s;
+}
+
+@media (min-width: 1024px) {
+  .scroller {
+    width: 35vw;
+  }
+
+  .scroller.in-full-view {
+    background-color: rgb(209, 225, 210); /* Equivalent to bg-green-200 */
+  }
+
+  .scroller.not-in-full-view {
+    background-color: rgba(187, 247, 208, 0); /* Transparent */
+  }
+}
+
+.scrollyteller-kicker {
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  background-color: #16a34a;
+  padding: 4px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 28px;
+  color: white; /* Equivalent to text-white */
+  transition: all 0.25s;
+}
+
+.scrollyteller-kicker:hover {
+  background-color: rgb(74 222 128);
+}
+
+/* Folio styles */
+
+.folio-container {
+  height: 100vh;
+  display: flex;
+}
+
+.folio-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  border-width: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 75vh;
+  padding: 16px;
+  border-radius: 8px;
+  max-width: 550px;
+  width: 80%;
+  text-wrap: pretty;
+  
+}
+
+.folio-card.active {
+  background-color: rgba(243, 244, 246, 0.8);
+}
+
+.folio-card.inactive {
+  background-color: rgba(243 244 246, 0.1);
+  opacity: 20%;
+}
+
+@media (min-width: 1024px) {
+  .folio-card {
+      margin-top: auto;
+      margin-bottom: auto;
+  }
+}
+
+.folio-bottom-row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.folio-buttons {
+  display: flex;
+  column-gap: 8px;
+}
+.folio-buttons > a, .folio-buttons > button {
+  border: 0px;
+  padding: 0px;
+  cursor: pointer;
+  background-color: transparent;
+  color: black;
+}
