@@ -1,5 +1,6 @@
-import Scrollyteller from "./lib/Scrollyteller";
-import Folio from "./lib/Folio";
+import React from "react";
+import { Scrollyteller } from "./lib/Scrollyteller";
+import { Folio } from "./lib/Folio";
 import "./App.css";
 
 function App() {

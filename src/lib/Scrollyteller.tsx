@@ -14,7 +14,7 @@ type ScrollytellerProps = {
   map: string;
 };
 
-const Scrollyteller = ({
+export const Scrollyteller = ({
   children,
   baseURL = "https://atlas.nomic.ai",
   map,
@@ -148,5 +148,3 @@ const Scrollyteller = ({
     </div>
   );
 };
-
-export default Scrollyteller;

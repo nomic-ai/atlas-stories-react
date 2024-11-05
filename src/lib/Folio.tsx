@@ -34,7 +34,7 @@ export type FolioProps = {
  * @param param0 The folio component
  * @returns
  */
-const Folio = ({ children, hash, zoom, duration }: FolioProps) => {
+export const Folio = ({ children, hash, zoom, duration }: FolioProps) => {
   const contentRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const { activeDiv, iframe, observer, folioMap, atlasURL } = useObserver();
@@ -145,5 +145,3 @@ const Folio = ({ children, hash, zoom, duration }: FolioProps) => {
     </div>
   );
 };
-
-export default Folio;
