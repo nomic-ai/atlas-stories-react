@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import React, { useEffect, useRef, useState } from "react";
-import {
-  MapTrifold,
-  ArrowCircleUp,
-  ArrowCircleDown,
-} from "@phosphor-icons/react";
-import { useObserver } from "./utils";
-import "./atlas-stories.css";
+import React, { useEffect, useRef, useState } from 'react';
+// import {
+//   MapTrifold,
+//   ArrowCircleUp,
+//   ArrowCircleDown,
+// } from "@phosphor-icons/react";
+import { useObserver } from './utils';
+import './atlas-stories.css';
 
 // TODO: make real
 type SavedAPICall = Record<string, unknown>;
@@ -15,10 +15,10 @@ type SavedAPICall = Record<string, unknown>;
 // KEEP IN SYNC WITH atlas-next!
 type MessageData =
   | ({
-      type: "atlas_state_change";
+      type: 'atlas_state_change';
       hash?: string;
     } & Partial<SavedAPICall> & { encoding?: never })
-  | { type: "atlas_settings_change" };
+  | { type: 'atlas_settings_change' };
 
 // In case non-message data is needed in Folios
 
@@ -63,12 +63,12 @@ const Folio = ({ children, hash, zoom, duration }: FolioProps) => {
   useEffect(() => {
     if (isActive) {
       const message: MessageData = {
-        type: "atlas_state_change",
+        type: 'atlas_state_change',
         hash,
         zoom: { bbox: zoom },
         duration,
       };
-      iframe?.contentWindow?.postMessage(message, "*");
+      iframe?.contentWindow?.postMessage(message, '*');
     }
   }, [isActive, hash, iframe, zoom, duration]);
 
@@ -90,11 +90,11 @@ const Folio = ({ children, hash, zoom, duration }: FolioProps) => {
     <div
       ref={containerRef}
       id={`folio-${folioIndex}`}
-      className={"folio-container"}
+      className={'folio-container'}
     >
       <div
         ref={contentRef}
-        className={`folio-card ${isActive ? "active" : "inactive"}`}
+        className={`folio-card ${isActive ? 'active' : 'inactive'}`}
       >
         {children}
         <div className="folio-bottom-row">
@@ -113,7 +113,7 @@ const Folio = ({ children, hash, zoom, duration }: FolioProps) => {
               </button> */}
             {/* TODO - support non-hash linking */}
             <a href={`${atlasURL}#${hash}`} target="_blank">
-              <MapTrifold size={20} />
+              {/* <MapTrifold size={20} /> */}
             </a>
           </div>
           <div className="folio-buttons">
@@ -122,22 +122,24 @@ const Folio = ({ children, hash, zoom, duration }: FolioProps) => {
                 // scroll to previous folio
                 const prevFolio = folioArray[folioIndex - 1];
                 if (prevFolio) {
-                  prevFolio.scrollIntoView({ behavior: "smooth" });
+                  prevFolio.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
             >
-              <ArrowCircleUp size={20} />
+              up
+              {/* <ArrowCircleUp size={20} /> */}
             </button>
             <button
               onClick={() => {
                 // scroll to next folio
                 const nextFolio = folioArray[folioIndex + 1];
                 if (nextFolio) {
-                  nextFolio.scrollIntoView({ behavior: "smooth" });
+                  nextFolio.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
             >
-              <ArrowCircleDown size={20} />
+              down
+              {/* <ArrowCircleDown size={20} /> */}
             </button>
           </div>
         </div>

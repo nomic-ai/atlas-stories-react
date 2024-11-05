@@ -8,7 +8,7 @@ export default defineConfig({
     target: 'es2019',
     minify: 'terser',
     lib: {
-      entry: __dirname + '/src/main.tsx',
+      entry: __dirname + '/src/lib.tsx',
       // name: 'atlas-stories-react',
       formats: ['es'],
     },

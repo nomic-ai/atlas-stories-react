@@ -1,14 +1,13 @@
-import Scrollyteller from "./lib/Scrollyteller";
-import Folio from "./lib/Folio";
-import "./App.css";
+import { Scrollyteller, Folio } from './lib';
+import './App.css';
 
 function App() {
   return (
     <div
       className="main"
       style={{
-        margin: "50px",
-        maxWidth: "calc(100vw - 100px)",
+        margin: '50px',
+        maxWidth: 'calc(100vw - 100px)',
       }}
     >
       <h1>Atlas story</h1>
@@ -44,14 +43,14 @@ function App() {
         <Folio hash="lnWe" zoom={{ x: [-32, 45], y: [-47, 32] }} duration={300}>
           This is a case where Atlas's semantic filters can help. Let's embed
           everything by vector similarity to a sentence about American football.
-          {">"} A player of football who runs up and down the gridiron with the
+          {'>'} A player of football who runs up and down the gridiron with the
           pigskin. Hike! Like Tom Brady. The red dots are the most similar, and
           the yellow the least.
         </Folio>
 
         <Folio hash="iQBh" zoom={{ x: [-32, 45], y: [-47, 32] }} duration={300}>
           Conversely, comparing to the sentence:
-          {">"} A player of football who kicks and scores, drawing penalties and
+          {'>'} A player of football who kicks and scores, drawing penalties and
           red cards like Cristiano Ronaldo or Lionel Messi. We get almost
           opposte results.
         </Folio>
