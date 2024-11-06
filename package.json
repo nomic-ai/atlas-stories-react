@@ -8,6 +8,7 @@
   "files": ["dist"],
   "exports": {
     ".": {
+      "types": "./dist/lib.d.ts",
       "import": "./dist/atlas-stories-react.js"
     },
     "./dist/style.css": "./dist/style.css"
