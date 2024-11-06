@@ -18,6 +18,7 @@
   width: 100vw;
   height: 100vh;
   position: relative;
+  border: 0;
 }
 
 @media (min-width: 1024px) {
