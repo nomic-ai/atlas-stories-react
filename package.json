@@ -1,11 +1,13 @@
 {
   "name": "@nomic-ai/atlas-stories-react",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "module": "./dist/atlas-stories-react.js",
   "types": "./dist/lib.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "exports": {
     ".": {
       "types": "./dist/lib.d.ts",
@@ -23,8 +25,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@eslint/js": "^9.13.0",
     "@types/node": "^22.9.0",
