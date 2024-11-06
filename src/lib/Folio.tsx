@@ -1,13 +1,11 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
-// import {
-//   MapTrifold,
-//   ArrowCircleUp,
-//   ArrowCircleDown,
-// } from "@phosphor-icons/react";
 import { useObserver } from './utils';
 import './atlas-stories.css';
+import MapTrifold from '../assets/map-trifold.svg';
+import ArrowCircleDown from '../assets/arrow-circle-down.svg';
+import ArrowCircleUp from '../assets/arrow-circle-up.svg';
 
 // TODO: make real
 type SavedAPICall = Record<string, unknown>;
@@ -113,7 +111,12 @@ const Folio = ({ children, hash, zoom, duration }: FolioProps) => {
               </button> */}
             {/* TODO - support non-hash linking */}
             <a href={`${atlasURL}#${hash}`} target="_blank">
-              {/* <MapTrifold size={20} /> */}
+              <img
+                src={MapTrifold}
+                alt="Open in Atlas"
+                width="20"
+                height="20"
+              />
             </a>
           </div>
           <div className="folio-buttons">
@@ -126,8 +129,12 @@ const Folio = ({ children, hash, zoom, duration }: FolioProps) => {
                 }
               }}
             >
-              up
-              {/* <ArrowCircleUp size={20} /> */}
+              <img
+                src={ArrowCircleUp}
+                alt="Scroll to previous folio"
+                width="20"
+                height="20"
+              />
             </button>
             <button
               onClick={() => {
@@ -138,8 +145,12 @@ const Folio = ({ children, hash, zoom, duration }: FolioProps) => {
                 }
               }}
             >
-              down
-              {/* <ArrowCircleDown size={20} /> */}
+              <img
+                src={ArrowCircleDown}
+                alt="Scroll to next folio"
+                width="20"
+                height="20"
+              />
             </button>
           </div>
         </div>
