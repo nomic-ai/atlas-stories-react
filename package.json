@@ -3,25 +3,31 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "main": "./dist/atlas-stories-react.js",
-  "types": "./dist/main.d.ts",
+  "module": "./dist/atlas-stories-react.js",
+  "types": "./dist/lib.d.ts",
+  "files": ["dist"],
+  "exports": {
+    ".": {
+      "import": "./dist/atlas-stories-react.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
   "scripts": {
     "dev": "vite --host",
     "build": "vite build && tsc --declaration --emitDeclarationOnly",
     "lint": "eslint .",
     "preview": "vite preview"
   },
-  "dependencies": {
-    "@phosphor-icons/react": "^2.1.7"
-  },
   "peerDependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
+  "dependencies": {
+  },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
     "@types/node": "^22.9.0",
-    "@types/react": "^18.3.12",
+    "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.3",
     "eslint": "^9.13.0",
