@@ -1,6 +1,5 @@
 {
   "name": "@nomic-ai/atlas-stories-react",
-  "private": true,
   "version": "0.1.1",
   "type": "module",
   "module": "./dist/atlas-stories-react.js",
