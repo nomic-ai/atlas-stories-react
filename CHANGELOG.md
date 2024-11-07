@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.3](https://github.com/nomic-ai/atlas-stories-react/compare/v0.1.2...v0.1.3) (2024-11-07)
+
+
+### Bug Fixes
+
+* publish publicly ([#14](https://github.com/nomic-ai/atlas-stories-react/issues/14)) ([042ebbc](https://github.com/nomic-ai/atlas-stories-react/commit/042ebbc484d7449c222162351742f703f4f10126))
+
 ## [0.1.2](https://github.com/nomic-ai/atlas-stories-react/compare/v0.1.1...v0.1.2) (2024-11-07)
 
 
