@@ -18,7 +18,8 @@
     "dev": "vite --host",
     "build": "vite build && tsc --declaration --emitDeclarationOnly",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "npm run build"
   },
   "peerDependencies": {
     "react": "^18.3.1",
