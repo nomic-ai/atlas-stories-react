@@ -37,6 +37,14 @@ const Folio = ({ children, hash, zoom, duration }: FolioProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { activeDiv, iframe, observer, folioMap, atlasURL } = useObserver();
 
+  if (hash?.includes('https')) {
+    throw new Error(
+      `Please pass only the hash, not the full URL -- did you mean to pass ${
+        hash.split('#')[1]
+      } instead of ${hash}?`
+    );
+  }
+
   useEffect(() => {
     if (containerRef.current && folioMap) {
       folioMap.set(containerRef.current, { hash, zoom, duration });
