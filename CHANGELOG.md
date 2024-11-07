@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.4](https://github.com/nomic-ai/atlas-stories-react/compare/v0.1.3...v0.1.4) (2024-11-07)
+
+
+### Bug Fixes
+
+* add prepare script to build for npm ([#16](https://github.com/nomic-ai/atlas-stories-react/issues/16)) ([3230b1c](https://github.com/nomic-ai/atlas-stories-react/commit/3230b1c118abcfb21de1d7513293ee56cf32417a))
+
 ## [0.1.3](https://github.com/nomic-ai/atlas-stories-react/compare/v0.1.2...v0.1.3) (2024-11-07)
 
 
