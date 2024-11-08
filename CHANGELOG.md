@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.5](https://github.com/nomic-ai/atlas-stories-react/compare/v0.1.4...v0.1.5) (2024-11-07)
+
+
+### Bug Fixes
+
+* throw errors when full urls are passed ([#20](https://github.com/nomic-ai/atlas-stories-react/issues/20)) ([150c076](https://github.com/nomic-ai/atlas-stories-react/commit/150c0766e057b9e80f08025f0b9556c81d9b3298))
+
 ## [0.1.4](https://github.com/nomic-ai/atlas-stories-react/compare/v0.1.3...v0.1.4) (2024-11-07)
 
 
